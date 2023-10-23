@@ -1,0 +1,177 @@
+@import "color";
+
+.home {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .home_text {
+    > h1 {
+      margin-top: 5rem;
+      font-size: 60px;
+    }
+
+    > p {
+      font-size: 1.1rem;
+      margin-left: 6px;
+      margin-top: 1rem;
+      font-weight: 300;
+      letter-spacing: 2px;
+    }
+
+    .home_btn {
+      margin-top: 1rem;
+      > button {
+        background-color: $nine;
+        outline: 0;
+        border: 0;
+        margin: 10px;
+        padding: 8px 20px;
+        border-radius: 2px;
+        transition: all 0.5s;
+        &:hover{
+          background-color: rgb(126, 24, 45);
+        }
+
+        > a {
+          font-weight: 200;
+          color: $second;
+        }
+      }
+    }
+    .client_div {
+      display: flex;
+      .client_work {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 3px;
+        background-color: $second;
+        width: 35%;
+        height: 10vh;
+        border-radius: 40%;
+
+        > p {
+          margin: 3px;
+        }
+      }
+
+      .client_work2 {
+        border-radius: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 3px;
+        background-color: $second;
+        width: 35%;
+
+        > p {
+          margin: 3px;
+        }
+      }
+    }
+  }
+  > img {
+    margin-top: 2rem;
+    cursor: pointer;
+    width: 30%;
+    transition: 0.5s ease;
+  }
+
+  > img:hover {
+    transform: translate(-5px, -10px);
+  }
+}
+
+/* My Services */
+
+#services {
+  padding: 30px 0;
+}
+
+.services_list {
+  cursor: pointer;
+  display: grid;
+  margin: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+  margin-top: 50px;
+}
+
+.services_list div {
+  border-radius: 7px;
+  padding: 40px;
+  transition: background 0.5s, transform 0.5s;
+}
+
+.services_list div h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.services_list div i {
+  font-size: 40px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.services_list div p {
+  font-size: 12px;
+}
+
+.services_list div a {
+  font-size: 18px;
+  // margin-top: 3rem;
+  position: relative;
+  top: 1rem;
+}
+
+.services_list div a:hover {
+  color: $second;
+}
+
+
+
+.services_list div:hover {
+  background: $nine;
+  transform: translateY(-10px);
+}
+
+@media only screen and (max-width: 600px) {
+  .home {
+    margin-top: 2rem;
+    flex-direction: column-reverse;
+    > img {
+      width: 70%;
+    }
+  }
+
+  .home_text {
+    margin-top: -5rem;
+    > h1 {
+      text-align: center;
+    }
+
+    > p {
+      text-align: center;
+    }
+  }
+
+  .home_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .client_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    padding: 3px;
+  }
+
+  .client_work2 {
+    height: 10vh;
+  }
+}

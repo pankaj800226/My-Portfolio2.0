@@ -1,0 +1,12 @@
+@import "color";
+footer{
+    background-color: $nine;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    color: $second;
+    margin-top: 2rem;
+    // letter-spacing: 2px;
+}

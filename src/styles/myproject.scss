@@ -1,0 +1,62 @@
+@import "color";
+
+.myproject_text {
+  font-size: 25px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  padding-left: 3%;
+  margin-top: 3%;
+}
+
+.main_project_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 10px;
+  grid-column-gap: 10px;
+
+  .main_project {
+    margin-top: 20px;
+  }
+
+  .main_project_text {
+    width: 100%;
+    > img {
+      cursor: pointer;
+      border-radius: 3px;
+      width: 100%;
+      transition: background 0.5s, transform 0.5s;
+
+      &:hover {
+        transform: translateY(-10px);
+      }
+    }
+    > p {
+      margin-top: 10px;
+      font-size: 17px;
+      letter-spacing: 1px;
+    }
+
+    > button {
+      // margin: 4px;
+      padding: 10px 30px;
+      border-radius: 5px;
+      outline: 0;
+      border: 0;
+      background-color: $nine;
+      color: $second;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: all 0.5s;
+      &:hover {
+        background-color: rgb(188, 31, 62);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main_project_container {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,10 @@
+.appdesign{
+    display: grid;
+    place-items: center;
+    height: 80vh;
+
+    >h1{
+        letter-spacing: 1px;
+        font-size: 27px;
+    }
+}
